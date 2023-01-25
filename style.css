@@ -13,6 +13,7 @@
     --Black: black;
     --White: #FFFFFF;
     --Pink: #FF8080;
+    --Pink2: #FF7575;
     --Purple: #FC73FF;
     --Gray: #ADADAD;
     --Gray2: #CCCCCC;
@@ -22,34 +23,40 @@
     --DarkText: #1C1C1C;
     --ProgressBar: #C4C4C4;
     --Green: #38D800;
-    
+
 }
 
 a {
     text-decoration: none;
     color: var(--Black);
 }
-input, button {
+
+input,
+button {
     outline: none;
     border: none;
 }
+
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance:none;
+    -webkit-appearance: none;
 }
 
 /* GLOBAL CLASSES */
 .gothic {
     font-family: 'Bakbak One', cursive;
 }
+
 .ubuntu {
     font-family: 'Ubuntu', sans-serif;
 }
+
 .roboto {
     font-family: 'Roboto', sans-serif;
 }
+
 .container {
     width: 1500px;
 }
@@ -60,16 +67,25 @@ input[type="search"]::-webkit-search-results-decoration {
         opacity: 1;
         width: 100%;
     }
+
     .cont .side header .elem a:hover {
         color: var(--Pink);
     }
+
     .cont .side .content .projects .img:hover {
         border: 3px solid #F16161;
         filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.6));
     }
+
     .cont .side .content .projects .img:hover:after {
         opacity: 1;
         transform: translateY(0px);
+    }
+
+    .cont .side .content .business .earn p:hover::after {
+        opacity: 1;
+        width: 100%;
+
     }
 }
 
@@ -77,11 +93,13 @@ input[type="search"]::-webkit-search-results-decoration {
 body {
     background: var(--Purple);
 }
+
 .icon {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .cont {
     border: 2px solid var(--Black);
     height: 1000px;
@@ -90,26 +108,33 @@ body {
     align-items: flex-start;
     justify-content: center;
 }
-.cont .box, header {
+
+.cont .box,
+header {
     background: var(--White);
     border: 3px solid var(--Gray);
     border-radius: 50px;
 }
+
 .cont .side .box {
     width: 100%;
 }
+
 .cont .side:first-child {
     width: 295px;
     margin-right: 22px;
 }
+
 .cont .side:last-child {
     width: calc(100% - 273px);
 }
+
 .cont .side:last-child .box:last-child {
     margin-top: 40px;
     padding-left: 53px;
     padding-right: 10px;
 }
+
 .cont .side header {
     height: 88px;
     display: flex;
@@ -118,12 +143,14 @@ body {
     padding-left: 60px;
     padding-right: 60px;
 }
+
 .cont .side header .elem a {
     font-size: 24px;
     color: var(--DarkRGB);
     position: relative;
     transition: 0.4s;
 }
+
 .cont .side header .elem a::after {
     transition: 0.4s;
     content: "";
@@ -135,11 +162,13 @@ body {
     border-top: 4px solid var(--Pink);
     opacity: 0;
 }
+
 .cont .side header .elem .inp {
     position: relative;
     height: 36px;
     width: 280px;
 }
+
 .cont .side header .elem .inp .icon {
     display: flex;
     justify-content: center;
@@ -150,6 +179,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
+
 .cont .side header .elem .inp input {
     position: absolute;
     top: 0;
@@ -162,10 +192,12 @@ body {
     padding-right: 25px;
     z-index: 1;
 }
+
 .cont .side header .elem {
     display: flex;
     align-items: center;
 }
+
 .cont .side header .elem .row:first-child {
     width: 70px;
     height: 70px;
@@ -175,6 +207,7 @@ body {
     overflow: hidden;
     margin-right: 7px;
 }
+
 .cont .side header .elem .row:first-child img {
     position: absolute;
     top: 0;
@@ -183,30 +216,36 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
 .cont .side header .elem .row h2 {
     color: var(--DarkText);
     font-size: 14px;
     margin-bottom: 5px;
 }
+
 .cont .side header .elem .row p {
     color: var(--DarkRGB);
     font-size: 12px;
     margin-bottom: 10px;
 }
+
 .cont .side header .elem .row .stars {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .cont .side header .elem .row .stars .icon {
     margin-right: 2px;
 }
+
 .cont .side header .elem .row:last-child {
     align-items: flex-start;
     justify-content: flex-start;
     display: flex;
     flex-direction: column;
 }
+
 .cont .side:first-child .box {
     padding-top: 42px;
     padding-left: 25px;
@@ -217,40 +256,49 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
 }
+
 .cont .side:first-child .box h2 {
     font-size: 24px;
     margin-bottom: 5px;
     color: var(--DarkRGB);
 }
+
 .cont .side:first-child .box p {
     font-size: 14px;
     color: var(--DarkRGB);
     margin-bottom: 11px;
 }
+
 .cont .side:first-child .box .progress-container {
     width: 100%;
     margin-bottom: 40px;
 }
+
 .cont .side:first-child .box .progress-container .elem:first-child {
     margin-top: 0px;
 }
+
 .cont .side:first-child .box .progress-container .elem {
     margin-top: 11px;
 }
+
 .cont .side:first-child .box .progress-container .elem .top {
     display: flex;
     align-items: center;
 }
+
 .cont .side:first-child .box .progress-container .elem .top .icon {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 5px;
 }
+
 .cont .side:first-child .box .progress-container .elem .top label {
     color: var(--Black);
     font-size: 12px;
 }
+
 .cont .side:first-child .box .progress-container .elem .bottom {
     margin-top: 11px;
     background-color: var(--ProgressBar);
@@ -259,6 +307,7 @@ body {
     height: 13px;
     position: relative;
 }
+
 .cont .side:first-child .box .progress-container .elem .bottom .progress {
     position: absolute;
     top: 0;
@@ -268,10 +317,12 @@ body {
     background-color: var(--Green);
     border-radius: 50px;
 }
+
 .cont .side:first-child .box .progress-container .elem .bottom .progress .val {
     font-size: 11px;
     color: var(--White);
 }
+
 .cont .side:first-child .box .work-button {
     padding-top: 14px;
     padding-bottom: 14px;
@@ -288,41 +339,50 @@ body {
     width: 100%;
     height: 44px;
 }
+
 .cont .side:first-child .box .work-button:first-child {
     margin-top: 0px;
 }
+
 .cont .side:first-child .box .work-button .icon {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 15px;
 }
+
 .cont .side:first-child .box .work-button p {
     font-size: 14px;
     color: var(--White);
     margin-bottom: 0px;
 }
+
 .cont .side:first-child .box .work-button:active {
     transform: scale(0.9);
 }
+
 .cont .side:first-child .box .check-container {
     margin-top: 19px;
 }
+
 .cont .side:first-child .box .check-container h3 {
     font-size: 18px;
     color: #5B5B5B;
     margin-bottom: 10px;
 }
+
 .cont .side:first-child .box .check-container .check-elem {
     display: flex;
     align-items: center;
 }
+
 .cont .side:first-child .box .check-container .check-elem .checkbox {
     position: relative;
     margin-right: 10px;
     width: 20px;
     height: 20px;
 }
+
 .cont .side:first-child .box .check-container .check-elem .checkbox input {
     position: absolute;
     top: 1px;
@@ -330,6 +390,7 @@ body {
     width: 18px;
     height: 18px;
 }
+
 .cont .side:first-child .box .check-container .check-elem .checkbox .mask {
     position: absolute;
     top: 0;
@@ -345,26 +406,28 @@ body {
     pointer-events: none;
     transition: 0.4s;
 }
-input[type="checkbox"]:checked ~ div{
+
+input[type="checkbox"]:checked~div {
     background: #C64BFF !important;
 }
 
-.cont .side .content h1{
+.cont .side .content h1 {
     font-size: 36px;
     display: flex;
     margin-top: 34px;
     margin-bottom: 19px;
-    color: var(--Gray4); 
+    color: var(--Gray4);
 }
-    
-    
-.cont .side .content .projects{
+
+
+.cont .side .content .projects {
     display: flex;
     width: 100%;
     height: 146px;
     margin-bottom: 73px;
     align-items: center;
 }
+
 .cont .side .content .projects .img {
     width: 236px;
     height: 146px;
@@ -375,6 +438,7 @@ input[type="checkbox"]:checked ~ div{
     overflow: hidden;
     transition: 0.4s;
 }
+
 .cont .side .content .projects .img::after {
     content: "View Project";
     width: calc(100% + 7px);
@@ -395,6 +459,7 @@ input[type="checkbox"]:checked ~ div{
     opacity: 0;
     transform: translateY(10px);
 }
+
 .cont .side .content .projects .img img {
     position: absolute;
     top: 0;
@@ -403,4 +468,117 @@ input[type="checkbox"]:checked ~ div{
     height: 100%;
     object-fit: cover;
     z-index: 1;
+}
+
+.cont .side .content .business {
+    display: flex;
+    margin-bottom: 45px;
+    width: 100%;
+    height: 36px;
+    align-items: center;
+
+}
+
+.cont .side .content .business .earn p {
+    font-size: 24px;
+    color: #858585;
+    position: relative;
+    top: 0;
+    left: 120px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.cont .side .content .business .earn p::after {
+    transition: 0.4s;
+    content: "";
+    width: 0%;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border-radius: 50px;
+    border-top: 4px solid var(--Black);
+    opacity: 0;
+    color: #313131;
+
+}
+
+.cont .side .content .money {
+    margin-bottom: 123px;
+    width: 900px;
+    height: 197px;
+    background-color: #F8F2F2;
+    border-radius: 30px;
+    display: flex;
+
+}
+
+.cont .side .content .money .left {
+    width: 55%;
+    display: flex;
+
+}
+.cont .side .content .money .right{
+    width: 45%;
+    align-items: center;
+    margin: 17px;
+    margin-right: 66px;
+    
+}
+.cont .side .content .money .right p{
+    font-size: 24px;
+    color: #9c9c9c;
+    font-weight: 700;
+    margin-bottom: 9px;
+    padding-right: 15px;
+}
+.cont .side .content .money .right h2{
+    font-size: 24px;
+    color: #494949;
+    font-weight: 700;
+    margin-bottom: 9px;
+    padding-right: 140px;
+}
+.cont .side .content .money .right h6{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Pink);
+    padding-right: 104px;
+}
+.cont .side .content .money .left .dollars {
+    
+} 
+.cont .side .content .money .left .dollars p {
+    color: var(--Gray4);
+    width: 69px;
+    height: 25px;
+    font-size: 24px;
+    margin: 17px;
+   
+}
+.cont .side .content .money .left .progres {
+    display: flex;
+    align-items: center;
+     
+}
+.cont .side .content .money .left .progres .bar {
+    align-items: center;
+    height: 23px;
+    width: 142px;
+    transform: rotate(-90deg);
+    background-color: var(--White); 
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.cont .side .content .money .left .progres .bar .child{
+    position: absolute;
+    background-color: var(--Pink2);
+    top: 0;
+    left: 0;
+    width: 53%;
+    height: 100%;
+    border-radius: 50px;
+    opacity: .8;
 }
